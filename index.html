@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Pizza Store</h1>
+    <nav>
+      <button onclick="showForm('add')">Add Pizza</button>
+      <button onclick="fetchPizzas()">View Pizzas</button>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="form-section">
+      <h2 id="form-title">Add New Pizza</h2>
+      <form id="pizza-form" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" id="pizza-id">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="price">Price:</label>
+        <input type="number" id="price" step="0.01" required>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="pizzas-list">
+      <h2>Pizza List</h2>
+      <ul id="pizza-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
